@@ -1,0 +1,56 @@
+module.exports = {
+  parser: 'babel-eslint',
+  env: {
+    es6: true,
+    jest: true,
+    browser: true,
+  },
+  extends: ['airbnb', 'prettier'],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+    __DEV__: true,
+  },
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
+  plugins: ['react', 'jsx-a11y', 'import', 'react-hooks', 'prettier'],
+  rules: {
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'prettier/prettier': ['error'],
+    'react/jsx-props-no-spreading': 'off',
+    'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
+    'import/prefer-default-export': 'off',
+    'no-console': ['error', { allow: ['tron'] }],
+    'no-unused-vars': 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'global-require': 'off',
+    'react-native/no-raw-text': 'off',
+    'no-param-reassign': 'off',
+    'no-underscore-dangle': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
+    camelcase: 'off',
+    // 'no-console': ['error', { allow: ['tron'] }],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'off',
+    'jsx-a11y/control-has-associated-label': 'off',
+    'react/no-typos': 'off',
+    'react/state-in-constructor': 'off',
+    'react/prop-types': 'off',
+    'import/no-cycle': 'off',
+    'react/static-property-placement': 'off',
+  },
+  settings: {
+    'import/resolver': {
+      'babel-plugin-root-import': {
+        rootPathPrefix: '@',
+        rootPathSuffix: 'src',
+      },
+    },
+  },
+};
